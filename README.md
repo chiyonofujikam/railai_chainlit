@@ -93,6 +93,15 @@ uv sync
 ```
 
 This installs all dependencies from your pyproject.toml using the Python version specified in .python-version.
+3. We will use Qdrant locally, so lets provide qdrant url in the `.env` file.
+
+to run Qdranr locally, install: [DOCKER](https://www.docker.com/get-started/)
+first, here's the : [Qdrant image](https://qdrant.tech/documentation/quickstart)
+
+```bash
+docker pull qdrant/qdrant docker run -p 6333:6333 -p 6334:6334 -v ${pwd}/qdrant_storage:/qdrant/storage:z qdrant/qdrant
+```
+
 3. **Run Chainlit App**:
 
 ```bash
